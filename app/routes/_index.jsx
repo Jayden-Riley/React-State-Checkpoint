@@ -1,10 +1,13 @@
-import { Component } from 'react';
+import { Component } from "react";
 
 // Meta function for SEO
 export const meta = () => {
   return [
     { title: "Profile Toggle with Remix" },
-    { name: "description", content: "A simple class-based component using Remix" },
+    {
+      name: "description",
+      content: "A simple class-based component using Remix",
+    },
   ];
 };
 
@@ -14,7 +17,7 @@ class Profile extends Component {
     person: {
       fullName: "Jayden Riley",
       bio: "A passionate web developer.",
-      imgSrc: "https://via.placeholder.com/150",  // Replace with your actual image URL
+      imgSrc: "https://via.placeholder.com/150",
       profession: "Web Developer",
     },
     shows: false,
@@ -43,7 +46,7 @@ class Profile extends Component {
   };
 
   render() {
-    const { person, shows, timeSinceMount } = this.state;
+    let { person, shows, timeSinceMount } = this.state;
 
     return (
       <div style={{ textAlign: "center", marginTop: "20px" }}>
